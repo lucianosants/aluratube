@@ -1,8 +1,9 @@
-import config from '../config.json';
-import { CSSReset } from '../src/components/CSSReset';
-import Header from '../src/components/Header';
-import Menu from '../src/components/Menu';
-import Timeline from '../src/components/Timeline';
+import { CSSReset } from '../components/CSSReset';
+import config from '../../config.json';
+
+import Menu from '../components/Menu';
+import Header from '../components/Header';
+import Timeline from '../components/Timeline';
 
 function HomePage() {
 	const style = {
