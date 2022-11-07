@@ -4,6 +4,7 @@ import config from '../../config.json';
 import Menu from '../components/Menu';
 import Header from '../components/Header';
 import Timeline from '../components/Timeline';
+import Favorites from '../components/Favorites';
 
 function HomePage() {
 	const style = {
@@ -23,6 +24,7 @@ function HomePage() {
 					job={config.job}
 				/>
 				<Timeline playlists={config.playlists} />
+				<Favorites favorites={config.favorites} />
 			</div>
 		</>
 	);

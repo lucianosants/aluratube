@@ -2,6 +2,20 @@
 	"name": "Luciano Santos (lucianosants)",
 	"job": "React Developer",
 	"github": "lucianosants",
+	"favorites": [
+		{
+			"id": 1,
+			"github": "omariosouto"
+		},
+		{
+			"id": 2,
+			"github": "rafaballerini"
+		},
+		{
+			"id": 3,
+			"github": "peas"
+		}
+	],
 	"playlists": {
 		"games": [
 			{
