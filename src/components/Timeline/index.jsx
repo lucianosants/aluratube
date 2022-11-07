@@ -8,8 +8,6 @@ export default function Timeline({ playlists }) {
 			{playlistNames.map((playlistName) => {
 				const videos = playlists[playlistName];
 
-				// console.log(videos);
-
 				return (
 					<section key={playlistName}>
 						<h2>{playlistName}</h2>

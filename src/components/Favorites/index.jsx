@@ -1,8 +1,6 @@
 import { StyledFavorites } from './styles';
 
 export default function Favorites({ favorites }) {
-	console.log(favorites);
-
 	return (
 		<StyledFavorites>
 			<h4>Aluratubes Favoritos</h4>
