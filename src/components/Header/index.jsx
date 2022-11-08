@@ -1,17 +1,17 @@
-import { StyledHeader } from './styles';
+import { StyledHeader, StyledUserBanner, StyledUserInfo } from './styles';
 
-export default function Header({ github, name, job }) {
+export default function Header({ github, name, job, bg }) {
 	return (
 		<StyledHeader>
-			<div className='user__banner'></div>
-			<section className='user__info'>
+			<StyledUserBanner bg={bg}></StyledUserBanner>
+			<StyledUserInfo>
 				<img src={`https://github.com/${github}.png`} />
 
 				<div>
 					<h2>{name}</h2>
 					<p>{job}</p>
 				</div>
-			</section>
+			</StyledUserInfo>
 		</StyledHeader>
 	);
 }

@@ -1,29 +1,34 @@
-import { CSSReset } from '../components/CSSReset';
+import { useState } from 'react';
+
 import config from '../../config.json';
 
+import { CSSReset } from '../components/CSSReset';
 import Menu from '../components/Menu';
 import Header from '../components/Header';
 import Timeline from '../components/Timeline';
 import Favorites from '../components/Favorites';
 
 function HomePage() {
-	const style = {
-		/* background: 'red' */
-	};
-
-	// console.log(config.playlists);
+	const [filterValue, setFilterValue] = useState('');
 
 	return (
 		<>
 			<CSSReset />
 			<div>
-				<Menu />
+				<Menu
+					filterValue={filterValue}
+					setFilterValue={setFilterValue}
+				/>
 				<Header
 					github={config.github}
 					name={config.name}
 					job={config.job}
+					bg={config.bg}
 				/>
-				<Timeline playlists={config.playlists} />
+				<Timeline
+					searchValue={filterValue}
+					playlists={config.playlists}
+				/>
 				<Favorites favorites={config.favorites} />
 			</div>
 		</>
@@ -31,7 +36,3 @@ function HomePage() {
 }
 
 export default HomePage;
-
-// function Menu() {
-// 	return <div>Menu</div>;
-// }

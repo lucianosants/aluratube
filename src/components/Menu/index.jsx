@@ -1,11 +1,13 @@
+import Search from './components/Search';
 import { StyledMenu } from './styles';
 
-export default function Menu() {
+export default function Menu({ filterValue, setFilterValue }) {
 	return (
 		<StyledMenu>
 			<div>
 				<Logo />
 			</div>
+			<Search filterValue={filterValue} setFilterValue={setFilterValue} />
 		</StyledMenu>
 	);
 }
