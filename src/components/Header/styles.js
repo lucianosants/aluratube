@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const StyledHeader = styled.header`
 	margin-top: 50px;
+	background-color: ${({ theme }) => theme.backgroundLevel1 || '#F9F9F9'};
 `;
 
 export const StyledUserBanner = styled.div`

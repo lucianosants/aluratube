@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const StyledSearch = styled.div`
 	display: flex;
 	flex-direction: row;
-	border: 1px solid ${({ theme }) => theme.borderBase};
+	border: 2px solid ${({ theme }) => theme.borderBase};
 	max-width: 425px;
 	width: 100%;
 	border-radius: 2px;
@@ -26,6 +26,11 @@ export const StyledSearch = styled.div`
 		border-left: 1px solid ${({ theme }) => theme.borderBase};
 		width: 40px;
 		height: 40px;
+
+		svg {
+			fill: ${({ theme }) => theme.textColorBase || '#222222'};
+		}
+
 		@media (min-width: 600px) {
 			width: 64px;
 			height: 40px;

@@ -10,6 +10,7 @@ export default function Search({ filterValue, setFilterValue }) {
 				type='text'
 				onChange={(e) => setQuery(e.target.value)}
 				value={query}
+				placeholder='Buscar...'
 			/>
 
 			<button>
