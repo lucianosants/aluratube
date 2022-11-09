@@ -1,18 +1,45 @@
 import styled from 'styled-components';
 
 export const StyledToggleTheme = styled.button`
+	background-color: #333333;
+	border: 0;
+	padding: 3px;
+	font-size: 12px;
 	width: 50px;
-	height: 26px;
-	border-radius: 30px;
-	cursor: pointer;
+	height: 25px;
+	display: flex;
+	justify-content: space-around;
+	border-radius: 10000px;
 	position: relative;
-	border: none;
-	background-color: ${({ theme }) => theme.backgroundLevel2};
-	border: 2px solid ${({ theme }) => theme.borderBase};
+	label {
+		width: 50px;
+	}
+	span {
+		display: inline-flex;
+		width: 20px;
+		height: 20px;
+		align-items: center;
+		justify-content: center;
+	}
 
-	&:before {
-		content: '🌞';
-		left: 0;
+	label:before {
+		content: '';
+		background-color: #fafafa;
+		border: 1px solid #333333;
+		width: 24px;
+		height: 24px;
+		border-radius: 100%;
+		position: absolute;
 		top: 0;
+		bottom: 0;
+		left: 0;
+		transition: 0.3s;
+		cursor: pointer;
+	}
+	input[type='checkbox'] {
+		display: none;
+	}
+	input[type='checkbox']:checked + label:before {
+		transform: translateX(100%);
 	}
 `;

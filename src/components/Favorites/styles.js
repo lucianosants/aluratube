@@ -23,7 +23,7 @@ export const StyledFavorites = styled.section`
 		gap: 8px;
 
 		&:visited {
-			color: currentColor;
+			color: ${({ theme }) => theme.textColorBase};
 		}
 	}
 

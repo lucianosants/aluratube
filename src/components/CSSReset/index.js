@@ -20,8 +20,12 @@ export const CSSReset = createGlobalStyle`
     display: flex;
     flex: 1;
     overflow-x: hidden;
-    background-color: ${({ theme }) => theme.backgroundBase || '#F9F9F9'};
-    color: ${({ theme }) => theme.textColorBase || '#222222'};
+    
+
+    background-color: ${({ theme }) => theme.backgroundBase};
+    color: ${({ theme }) => theme.textColorBase};
+    
+    
   }
   #__next {
     display: flex;

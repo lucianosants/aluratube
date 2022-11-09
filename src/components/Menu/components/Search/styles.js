@@ -28,7 +28,7 @@ export const StyledSearch = styled.div`
 		height: 40px;
 
 		svg {
-			fill: ${({ theme }) => theme.textColorBase || '#222222'};
+			fill: ${({ theme }) => theme.textColorBase};
 		}
 
 		@media (min-width: 600px) {
