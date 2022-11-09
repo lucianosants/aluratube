@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { StyledTimeline } from './styles';
 
 export default function Timeline({ searchValue, ...props }) {
@@ -25,10 +26,15 @@ export default function Timeline({ searchValue, ...props }) {
 								})
 								.map((video) => {
 									return (
-										<a key={video.url} href={video.url}>
-											<img src={video.thumb} />
-											<span>{video.title}</span>
-										</a>
+										<Link
+											key={video.url}
+											href={`/video/${video.embed}`}
+										>
+											<a>
+												<img src={video.thumb} />
+												<span>{video.title}</span>
+											</a>
+										</Link>
 									);
 								})}
 						</div>

@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }) {
 	return (
 		<ThemeProvider theme={themeActive[context.mode]}>
 			<CSSReset />
-			<Component {...pageProps} />;
+			<Component {...pageProps} />
 		</ThemeProvider>
 	);
 }
