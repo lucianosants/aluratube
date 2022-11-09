@@ -26,10 +26,7 @@ export default function Timeline({ searchValue, ...props }) {
 								})
 								.map((video) => {
 									return (
-										<Link
-											key={video.url}
-											href={`/video/${video.embed}`}
-										>
+										<Link key={video.url} href={video.url}>
 											<a>
 												<img src={video.thumb} />
 												<span>{video.title}</span>
