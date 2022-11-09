@@ -7,6 +7,21 @@ export const CSSReset = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
+
+  ::-webkit-scrollbar {
+        width: 8px;
+        height: 12px;
+    }
+    ::-webkit-scrollbar-track {
+        background: ${({ theme }) => theme.backgroundLevel2};
+        border: 2px solid ${({ theme }) => theme.borderBase};
+        border-radius: 12px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: ${({ theme }) => theme.textColorBase};
+        border-radius: 12px;
+    }
+
   body {
     font-family: sans-serif;
   }

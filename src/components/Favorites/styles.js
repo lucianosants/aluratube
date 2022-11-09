@@ -21,6 +21,7 @@ export const StyledFavorites = styled.section`
 		align-items: center;
 		justify-content: center;
 		gap: 8px;
+		color: ${({ theme }) => theme.textColorBase};
 
 		&:visited {
 			color: ${({ theme }) => theme.textColorBase};
