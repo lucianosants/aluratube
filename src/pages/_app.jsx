@@ -7,6 +7,7 @@ import { light } from '../styles/themes/light';
 import { dark } from '../styles/themes/dark';
 
 import ProviderWrapper, { ColorModeContext } from '../context/ColorModeContext';
+import RegisterVideo from '../components/RegisterVideo';
 
 function MyApp({ Component, pageProps }) {
 	const context = useContext(ColorModeContext);
@@ -16,6 +17,7 @@ function MyApp({ Component, pageProps }) {
 		<ThemeProvider theme={themeActive[context.mode]}>
 			<CSSReset />
 			<Component {...pageProps} />
+			<RegisterVideo />
 		</ThemeProvider>
 	);
 }

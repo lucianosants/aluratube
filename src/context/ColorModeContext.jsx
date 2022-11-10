@@ -29,6 +29,6 @@ export function ColorModeProvider({ children, initialMode }) {
 
 export default function ProviderWrapper({ children }) {
 	return (
-		<ColorModeProvider initialMode={'light'}>{children}</ColorModeProvider>
+		<ColorModeProvider initialMode={'dark'}>{children}</ColorModeProvider>
 	);
 }
