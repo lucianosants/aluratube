@@ -3,7 +3,7 @@ import useForm from '../../hooks/useForm';
 import { StyledRegisterVideo } from './styles';
 
 export default function RegisterVideo() {
-	const [formVisible, setFormVisible] = useState(true);
+	const [formVisible, setFormVisible] = useState(false);
 
 	const registerForm = useForm({
 		initialValues: {
