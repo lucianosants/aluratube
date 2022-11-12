@@ -22,7 +22,8 @@ export const StyledRegisterVideo = styled.div`
 		top: 8px;
 		right: 16px;
 		color: inherit;
-		background-color: transparent;
+		background-color: red;
+		border-radius: 50%;
 		border: none;
 		cursor: pointer;
 	}
@@ -49,13 +50,39 @@ export const StyledRegisterVideo = styled.div`
 		& > div {
 			flex: 1;
 			border-radius: 8px;
+			border: 1px solid red;
 			max-width: 320px;
+			height: 300px;
 			background-color: ${({ theme }) => theme.backgroundLevel2};
 			display: flex;
 			flex-direction: column;
+			justify-content: center;
 			position: relative;
 			padding: 16px;
 			padding-top: 40px;
+		}
+
+		.input__check--container {
+			label {
+				display: flex;
+				flex-direction: row;
+				gap: 12px;
+			}
+
+			.input__check {
+				appearance: none;
+				background-color: ${({ theme }) => theme.backgroundBase};
+				width: 14px;
+				height: 14px;
+				border-radius: 50%;
+				padding: 8px;
+				border: 1px solid red;
+
+				&:checked {
+					background-color: red;
+					border: 1px solid ${({ theme }) => theme.textColorBase};
+				}
+			}
 		}
 	}
 	input {

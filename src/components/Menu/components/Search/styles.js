@@ -12,7 +12,7 @@ export const StyledSearch = styled.div`
 
 	input {
 		width: 80%;
-		padding: 4px 6px;
+		padding: 4px 12px;
 		border: none;
 		outline: none;
 		color: ${({ theme }) => theme.textColorBase};
