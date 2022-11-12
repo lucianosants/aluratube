@@ -15,6 +15,7 @@ function HomePage() {
 
 	const service = videoService();
 	const { config: user } = useFetchDocument('user');
+	const { config: favorites } = useFetchDocument('favorites');
 
 	useEffect(() => {
 		service.getAllVideos().then((res) => {
@@ -40,7 +41,7 @@ function HomePage() {
 				bg={config.bg}
 			/>
 			<Timeline searchValue={filterValue} playlists={playlists} />
-			<Favorites favorites={config.favorites} />
+			<Favorites favorites={favorites.map((fav) => fav)} />
 		</div>
 	);
 }
