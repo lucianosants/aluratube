@@ -1,43 +1,22 @@
-import Link from 'next/link';
+import Backend from './components/Backend';
 import { StyledTimeline } from './styles';
 
-export default function Timeline({ searchValue, ...props }) {
-	const playlistNames = Object.keys(props.playlists);
-
+export default function Timeline({ searchValue, frontend, games, backend }) {
 	return (
 		<StyledTimeline>
-			{playlistNames.map((playlistName) => {
-				const videos = props.playlists[playlistName];
+			<Backend title='Games' content={games} searchValue={searchValue} />
 
-				return (
-					<section key={playlistName}>
-						<h2>{playlistName}</h2>
-						<div>
-							{videos
-								.filter((video) => {
-									const titleNormalized =
-										video.title.toLowerCase();
-									const searchValueNormalized =
-										searchValue.toLowerCase();
+			<Backend
+				title='Front-End'
+				content={frontend}
+				searchValue={searchValue}
+			/>
 
-									return titleNormalized.includes(
-										searchValueNormalized
-									);
-								})
-								.map((video) => {
-									return (
-										<Link key={video.url} href={video.url}>
-											<a>
-												<img src={video.thumb} />
-												<span>{video.title}</span>
-											</a>
-										</Link>
-									);
-								})}
-						</div>
-					</section>
-				);
-			})}
+			<Backend
+				title='Back-End'
+				content={backend}
+				searchValue={searchValue}
+			/>
 		</StyledTimeline>
 	);
 }

@@ -8,7 +8,15 @@ export default function Header({ github, name, job, bg }) {
 				<img src={`https://github.com/${github}.png`} />
 
 				<div>
-					<h2>{name}</h2>
+					<h2>
+						{name}{' '}
+						<a
+							href={`https://github.com/${github}`}
+							target='_blank'
+						>
+							({github})
+						</a>
+					</h2>
 					<p>{job}</p>
 				</div>
 			</StyledUserInfo>

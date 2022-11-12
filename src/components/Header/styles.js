@@ -28,4 +28,13 @@ export const StyledUserInfo = styled.div`
 		border-radius: 50%;
 		border: 2px solid red;
 	}
+
+	a {
+		color: red;
+		font-weight: 400;
+	}
+
+	p {
+		opacity: 0.7;
+	}
 `;

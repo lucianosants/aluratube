@@ -20,5 +20,5 @@ export default function useFetchDocument(document) {
 		};
 		getUser();
 	}, []);
-	return { config };
+	return { config, setConfig };
 }
