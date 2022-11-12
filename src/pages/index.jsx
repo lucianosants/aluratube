@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import config from '../../config.json';
+import useFetchDocument from '../hooks/useFetchDocument';
 
 import Menu from '../components/Menu';
 import Header from '../components/Header';
@@ -13,6 +14,7 @@ function HomePage() {
 	const [playlists, setPlaylists] = useState({});
 
 	const service = videoService();
+	const { config: user } = useFetchDocument('user');
 
 	useEffect(() => {
 		service.getAllVideos().then((res) => {
@@ -31,9 +33,10 @@ function HomePage() {
 		<div>
 			<Menu filterValue={filterValue} setFilterValue={setFilterValue} />
 			<Header
-				github={config.github}
-				name={config.name}
-				job={config.job}
+				github={user.map((doc) => doc.github)}
+				name={user.map((doc) => doc.name)}
+				userName={user.map((doc) => doc.github)}
+				job={user.map((doc) => doc.job)}
 				bg={config.bg}
 			/>
 			<Timeline searchValue={filterValue} playlists={playlists} />
